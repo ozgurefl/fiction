@@ -1,27 +1,30 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #333;
+  background-color: #2c3e50;
   color: #fff;
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5rem;
+  animation: fadeIn 1s ease-in-out;
 }
 
 header p {
   margin: 10px 0 0;
   font-size: 1.2rem;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 main {
@@ -34,55 +37,73 @@ main {
 .genre-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  gap: 15px;
   width: 100%;
-  max-width: 800px;
-  margin-bottom: 20px;
+  max-width: 1000px;
+  margin-bottom: 30px;
 }
 
 .genre-list button {
-  padding: 10px;
+  padding: 15px;
   font-size: 1rem;
-  background-color: #007bff;
+  background-color: #3498db;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .genre-list button:hover {
-  background-color: #0056b3;
+  background-color: #2980b9;
+  transform: translateY(-5px);
 }
 
 .genre-details {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 800px;
-  text-align: center;
+  text-align: left;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .genre-details h2 {
   margin-top: 0;
   font-size: 2rem;
+  color: #2c3e50;
 }
 
-.genre-details p {
+.genre-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.genre-details ul li {
+  margin-bottom: 10px;
   font-size: 1.1rem;
-  line-height: 1.6;
 }
 
 footer {
-  background-color: #333;
+  background-color: #2c3e50;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Responsive Design */
@@ -103,7 +124,7 @@ footer {
     font-size: 1.5rem;
   }
 
-  .genre-details p {
+  .genre-details ul li {
     font-size: 1rem;
   }
 }

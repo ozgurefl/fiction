@@ -2,51 +2,112 @@
 const genres = {
   mystery: {
     title: "Mystery/Thriller",
-    description: "A central puzzle or crime, often a murder or theft, with a detective or sleuth investigating. Includes clues, red herrings, suspense, and a twist ending."
+    description: [
+      "Central puzzle or crime (e.g., murder, theft).",
+      "Detective or sleuth as the protagonist.",
+      "Clues and red herrings to mislead or guide.",
+      "Suspenseful buildup of tension.",
+      "Twist ending for an unexpected resolution."
+    ]
   },
   scifi: {
     title: "Science Fiction",
-    description: "Futuristic or speculative settings with advanced technology. Explores scientific concepts and often includes social commentary."
+    description: [
+      "Futuristic or speculative settings.",
+      "Advanced technology (e.g., AI, space travel).",
+      "Exploration of scientific concepts.",
+      "Social commentary on societal issues."
+    ]
   },
   fantasy: {
     title: "Fantasy",
-    description: "Magical elements, mythical creatures, and richly detailed world-building. Often features a hero's journey and a battle between good and evil."
+    description: [
+      "Magical elements and mythical creatures.",
+      "Richly detailed world-building.",
+      "Hero’s journey or quest narrative.",
+      "Clear battle between good and evil."
+    ]
   },
   romance: {
     title: "Romance",
-    description: "Focuses on a central love story with emotional conflict and a happy ending. Common tropes include love triangles and enemies-to-lovers."
+    description: [
+      "Central love story as the focus.",
+      "Emotional conflict and obstacles.",
+      "Happy ending for the couple.",
+      "Common tropes like love triangles or enemies-to-lovers."
+    ]
   },
   horror: {
     title: "Horror",
-    description: "Designed to evoke fear or dread, often with supernatural or psychological threats. Features isolation, gore, and suspense."
+    description: [
+      "Designed to evoke fear or dread.",
+      "Supernatural or psychological threats.",
+      "Isolation of characters.",
+      "Gore, suspense, and shocking twists."
+    ]
   },
   historical: {
     title: "Historical Fiction",
-    description: "Set in a real historical period with accurate details. Blends fact and fiction, often exploring themes of identity or survival."
+    description: [
+      "Set in a real historical period.",
+      "Blend of factual and fictional elements.",
+      "Themes of identity, survival, or resilience.",
+      "Attention to historical accuracy and detail."
+    ]
   },
   literary: {
     title: "Literary Fiction",
-    description: "Character-driven stories with thematic depth. Often explores complex themes like identity, morality, or the human condition."
+    description: [
+      "Character-driven narratives.",
+      "Exploration of complex themes (e.g., morality, identity).",
+      "Ambiguous or open-ended resolutions.",
+      "Emphasis on stylistic and innovative prose."
+    ]
   },
   adventure: {
     title: "Adventure",
-    description: "Features a journey or quest with action, danger, and exotic locations. Often includes a heroic protagonist."
+    description: [
+      "Journey or quest as the central plot.",
+      "Action-packed and high-stakes scenarios.",
+      "Exotic or remote locations.",
+      "Heroic and resourceful protagonist."
+    ]
   },
   dystopian: {
     title: "Dystopian",
-    description: "Set in an oppressive society with themes of rebellion, control, and freedom. Often features a grim, post-apocalyptic world."
+    description: [
+      "Oppressive or tyrannical society.",
+      "Themes of rebellion and resistance.",
+      "Exploration of control and freedom.",
+      "Grim, often post-apocalyptic settings."
+    ]
   },
   ya: {
     title: "Young Adult (YA)",
-    description: "Focuses on coming-of-age themes with relatable protagonists. Explores friendships, family, and first love in a fast-paced plot."
+    description: [
+      "Coming-of-age themes.",
+      "Relatable teenage protagonists.",
+      "Fast-paced and engaging plots.",
+      "Focus on friendships, family, and first love."
+    ]
   },
   western: {
     title: "Western",
-    description: "Set in the American Old West with cowboys, outlaws, and themes of justice. The landscape often plays a significant role."
+    description: [
+      "Set in the American Old West.",
+      "Cowboys, outlaws, and lawmen.",
+      "Themes of justice and redemption.",
+      "Landscape as a central character."
+    ]
   },
   crime: {
     title: "Crime",
-    description: "Focuses on criminal activity with morally ambiguous characters. Often includes complex plots with twists and turns."
+    description: [
+      "Focus on criminal activity.",
+      "Morally ambiguous characters.",
+      "Complex plots with twists and turns.",
+      "Exploration of law enforcement and justice."
+    ]
   }
 };
 
@@ -61,6 +122,6 @@ genreButtons.forEach(button => {
     const genreKey = button.getAttribute("data-genre");
     const genre = genres[genreKey];
     genreTitle.textContent = genre.title;
-    genreDescription.textContent = genre.description;
+    genreDescription.innerHTML = genre.description.map(item => `<li>${item}</li>`).join("");
   });
 });
