@@ -1,13 +1,12 @@
 // Genre data
 const genres = {
-  mystery: {
-    title: "Mystery/Thriller",
+  realism: {
+    title: "Realism",
     description: [
-      "Central puzzle or crime (e.g., murder, theft).",
-      "Detective or sleuth as the protagonist.",
-      "Clues and red herrings to mislead or guide.",
-      "Suspenseful buildup of tension.",
-      "Twist ending for an unexpected resolution."
+      "Focus on everyday life and ordinary people.",
+      "Detailed and accurate depictions of reality.",
+      "Exploration of social issues and human behavior.",
+      "Avoidance of romanticism or exaggeration."
     ]
   },
   scifi: {
@@ -28,6 +27,24 @@ const genres = {
       "Clear battle between good and evil."
     ]
   },
+  horror: {
+    title: "Horror",
+    description: [
+      "Designed to evoke fear or dread.",
+      "Supernatural or psychological threats.",
+      "Isolation of characters.",
+      "Gore, suspense, and shocking twists."
+    ]
+  },
+  magicalrealism: {
+    title: "Magical Realism",
+    description: [
+      "Blend of realistic settings with magical elements.",
+      "Magic is treated as a normal part of the world.",
+      "Focus on character emotions and relationships.",
+      "Often used to explore cultural or political themes."
+    ]
+  },
   romance: {
     title: "Romance",
     description: [
@@ -37,13 +54,13 @@ const genres = {
       "Common tropes like love triangles or enemies-to-lovers."
     ]
   },
-  horror: {
-    title: "Horror",
+  mystery: {
+    title: "Mystery",
     description: [
-      "Designed to evoke fear or dread.",
-      "Supernatural or psychological threats.",
-      "Isolation of characters.",
-      "Gore, suspense, and shocking twists."
+      "Central puzzle or crime (e.g., murder, theft).",
+      "Detective or sleuth as the protagonist.",
+      "Clues and red herrings to mislead or guide.",
+      "Twist ending for an unexpected resolution."
     ]
   },
   historical: {
@@ -55,26 +72,8 @@ const genres = {
       "Attention to historical accuracy and detail."
     ]
   },
-  literary: {
-    title: "Literary Fiction",
-    description: [
-      "Character-driven narratives.",
-      "Exploration of complex themes (e.g., morality, identity).",
-      "Ambiguous or open-ended resolutions.",
-      "Emphasis on stylistic and innovative prose."
-    ]
-  },
-  adventure: {
-    title: "Adventure",
-    description: [
-      "Journey or quest as the central plot.",
-      "Action-packed and high-stakes scenarios.",
-      "Exotic or remote locations.",
-      "Heroic and resourceful protagonist."
-    ]
-  },
-  dystopian: {
-    title: "Dystopian",
+  dystopia: {
+    title: "Dystopia",
     description: [
       "Oppressive or tyrannical society.",
       "Themes of rebellion and resistance.",
@@ -82,31 +81,13 @@ const genres = {
       "Grim, often post-apocalyptic settings."
     ]
   },
-  ya: {
-    title: "Young Adult (YA)",
+  gothic: {
+    title: "Gothic",
     description: [
-      "Coming-of-age themes.",
-      "Relatable teenage protagonists.",
-      "Fast-paced and engaging plots.",
-      "Focus on friendships, family, and first love."
-    ]
-  },
-  western: {
-    title: "Western",
-    description: [
-      "Set in the American Old West.",
-      "Cowboys, outlaws, and lawmen.",
-      "Themes of justice and redemption.",
-      "Landscape as a central character."
-    ]
-  },
-  crime: {
-    title: "Crime",
-    description: [
-      "Focus on criminal activity.",
-      "Morally ambiguous characters.",
-      "Complex plots with twists and turns.",
-      "Exploration of law enforcement and justice."
+      "Dark, eerie, and mysterious atmosphere.",
+      "Focus on the supernatural or grotesque.",
+      "Themes of decay, madness, and isolation.",
+      "Often set in haunted castles or mansions."
     ]
   }
 };
