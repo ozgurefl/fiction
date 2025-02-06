@@ -102,10 +102,10 @@ const genres = {
   }
 };
 
+
 // Get DOM elements
 const genreTitle = document.getElementById("genre-title");
 const genreDescription = document.getElementById("genre-description");
-const genreExamples = document.getElementById("genre-examples");
 const genreButtons = document.querySelectorAll(".genre-list button");
 
 // Add event listeners to buttons
@@ -115,40 +115,5 @@ genreButtons.forEach(button => {
     const genre = genres[genreKey];
     genreTitle.textContent = genre.title;
     genreDescription.innerHTML = genre.description.map(item => `<li>${item}</li>`).join("");
-    genreExamples.innerHTML = `<strong>Examples:</strong> ${genre.examples.join(", ")}`;
   });
-});
-
-// Quick Overview Section
-document.getElementById("toggle-overview").addEventListener("click", () => {
-  const table = document.getElementById("overview-table");
-  table.style.display = table.style.display === "none" ? "block" : "none";
-});
-
-// Compare Genres Feature
-document.getElementById("compare-genres").addEventListener("click", () => {
-  const comparisonSection = document.getElementById("comparison-section");
-  comparisonSection.style.display = "block";
-});
-
-document.getElementById("compare-button").addEventListener("click", () => {
-  const genre1 = document.getElementById("genre1").value;
-  const genre2 = document.getElementById("genre2").value;
-  const genre1Data = genres[genre1];
-  const genre2Data = genres[genre2];
-
-  const results = `
-    <h3>${genre1Data.title} vs. ${genre2Data.title}</h3>
-    <div>
-      <h4>${genre1Data.title}</h4>
-      <ul>${genre1Data.description.map(item => `<li>${item}</li>`).join("")}</ul>
-      <p><strong>Examples:</strong> ${genre1Data.examples.join(", ")}</p>
-    </div>
-    <div>
-      <h4>${genre2Data.title}</h4>
-      <ul>${genre2Data.description.map(item => `<li>${item}</li>`).join("")}</ul>
-      <p><strong>Examples:</strong> ${genre2Data.examples.join(", ")}</p>
-    </div>
-  `;
-  document.getElementById("comparison-results").innerHTML = results;
 });
