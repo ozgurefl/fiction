@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Genre Conventions</title>
+  <title>Fiction Genre Conventions</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,6 +13,31 @@
   </header>
 
   <main>
+    <!-- Quick Overview Section -->
+    <button id="toggle-overview">Show Quick Overview</button>
+    <div id="overview-table" style="display: none;">
+      <table>
+        <thead>
+          <tr>
+            <th>Genre</th>
+            <th>Conventions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Realism</td>
+            <td>Everyday life, social issues, accurate depictions</td>
+          </tr>
+          <tr>
+            <td>Science Fiction</td>
+            <td>Futuristic settings, advanced tech, social commentary</td>
+          </tr>
+          <!-- Add more rows for other genres -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Genre Buttons -->
     <section class="genre-list">
       <button data-genre="realism">Realism</button>
       <button data-genre="scifi">Science Fiction</button>
@@ -26,12 +51,45 @@
       <button data-genre="gothic">Gothic</button>
     </section>
 
+    <!-- Genre Details Section -->
     <section class="genre-details">
       <h2 id="genre-title">Select a Genre</h2>
       <ul id="genre-description">
         <li>Click on a genre above to see its common conventions.</li>
       </ul>
+      <p id="genre-examples"><strong>Examples:</strong> </p>
     </section>
+
+    <!-- Compare Genres Section -->
+    <button id="compare-genres">Compare Genres</button>
+    <div id="comparison-section" style="display: none;">
+      <select id="genre1">
+        <option value="realism">Realism</option>
+        <option value="scifi">Science Fiction</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="horror">Horror</option>
+        <option value="magicalrealism">Magical Realism</option>
+        <option value="romance">Romance</option>
+        <option value="mystery">Mystery</option>
+        <option value="historical">Historical Fiction</option>
+        <option value="dystopia">Dystopia</option>
+        <option value="gothic">Gothic</option>
+      </select>
+      <select id="genre2">
+        <option value="realism">Realism</option>
+        <option value="scifi">Science Fiction</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="horror">Horror</option>
+        <option value="magicalrealism">Magical Realism</option>
+        <option value="romance">Romance</option>
+        <option value="mystery">Mystery</option>
+        <option value="historical">Historical Fiction</option>
+        <option value="dystopia">Dystopia</option>
+        <option value="gothic">Gothic</option>
+      </select>
+      <button id="compare-button">Compare</button>
+      <div id="comparison-results"></div>
+    </div>
   </main>
 
   <footer>
